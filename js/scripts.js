@@ -5,4 +5,8 @@ $(document).ready(function() {
     var thirdQuestion = parseInt($("input:radio[name=answer2]:checked")).val();
     var fourthQuestion = parseInt($("input:radio[name=answer3]:checked")).val();
     var fifthQuestion = parseInt($("input:radio[name=answer4]:checked")).val();
-  })
+
+    var total =firstQuestion + secondQuestion + thirdQuestion + fourthQuestion + fifthQuestion;
+    $(document).getElementById('results').innerHTML = "Your score is" + total;
+  });
+});
