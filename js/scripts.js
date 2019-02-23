@@ -1,12 +1,52 @@
-$(document).ready(function() {
-  $("button").click(function(){
-    var firstQuestion = parseInt($("input:radio[name=answer]:checked")).val();
-    var secondQuestion = parseInt($("input:radio[name=answer1]:checked")).val();
-    var thirdQuestion = parseInt($("input:radio[name=answer2]:checked")).val();
-    var fourthQuestion = parseInt($("input:radio[name=answer3]:checked")).val();
-    var fifthQuestion = parseInt($("input:radio[name=answer4]:checked")).val();
+var answers = [".push()","||","Back-end","Wells","jQuery"];
+var pointPerCorrect = 10;
 
-    var total =firstQuestion + secondQuestion + thirdQuestion + fourthQuestion + fifthQuestion;
-    $(document).getElementById('results').innerHTML = "Your score is" + total;
-  });
+
+function percentage(score) {
+return "Your score is " + parseInt((score / 50) * 100) + "%";
+}
+
+$(document).ready(function(){
+   $("#questions").submit(function (event) {
+
+
+      $('#result').text('');
+      var score = 0;
+      var answerOne = ($("input[type=radio][name=answer]:checked").val());
+      var answerTwo = ($("input[type=radio][name=answer1]:checked").val());
+      var answerThree = ($("input[type=radio][name=answer2]:checked").val());
+      var answerFour = ($("input[type=radio][name=answer3]:checked").val());
+      var answerFive = ($("input[type=radio][name=answer4]:checked").val());
+
+      if (answer === undefined || answer1 === undefined || answer2 === undefined answer3 === undefined answer4 === undefined) {
+  $('#questionsIncomplete').text('Please Complete questions Before Submitting');
+  $('#questionsIncomplete').fadeOut(10000);
+} else {
+         if (answer1 === answers[0]) {
+    score += pointPerCorrect;
+  }
+         if (answer2 === answers[1]) {
+    score += pointPerCorrect;
+  }
+         if (answer3 === answers[2]) {
+    score += pointPerCorrect;
+  }
+         if (answer4 === answers[3]) {
+           score += pointPerCorrect;
+ }
+         if (answer5 === answers[4]) {
+           score += pointPerCorrect;
+ }
+
+
+        $("input[type=radio][name=questionOneChoice]:checked").prop('checked', false);
+        $("input[type=radio][name=questionTwoChoice]:checked").prop('checked', false);
+        $("input[type=radio][name=questionThreeChoice]:checked").prop('checked', false);
+        $("input[type=radio][name=questionFourChoice]:checked").prop('checked', false);
+        $("input[type=radio][name=questionFiveChoice]:checked").prop('checked', false);
+        $('#questionsIncomplete').text('');
+        $('#result').text(percentage(score));
+}
+          event.preventDefault();
+ });
 });
