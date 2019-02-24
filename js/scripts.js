@@ -2,7 +2,7 @@ var answers = [".push()","||","Back-end","Wells","jQuery"];
 var pointPerCorrect = 10;
 
 
-function percentage(score) {
+function percentage (score) {
 return "Your score is " + parseInt((score / 50) * 100) + "%";
 }
 
@@ -18,7 +18,7 @@ $(document).ready(function(){
       var answerFour = ($("input[type=radio][name=answer3]:checked").val());
       var answerFive = ($("input[type=radio][name=answer4]:checked").val());
 
-      if (answer === undefined || answer1 === undefined || answer2 === undefined answer3 === undefined answer4 === undefined) {
+      if (answers0 === undefined || answers1 === undefined || answers2 === undefined || answers3 === undefined || answers4 === undefined); {
   $('#questionsIncomplete').text('Please Complete questions Before Submitting');
   $('#questionsIncomplete').fadeOut(10000);
 } else {
