@@ -1,3 +1,4 @@
+//
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,24 +12,27 @@
   <body background-image scr="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVT-c8ldyE4ImRHWukzQGjlTwSxY6phPPAtQr6jgdNqBLI2a3W9Q">
     <div class="container">
       <div class="jumbotron">
+      	<div id="questions">
         <h1>QUIZ-BOARD!</h1>
+    </div>
       </div>
+      <div id="questions">
       <h2><u>Answer all the questions asked.</u></h2>
-
+  	  </div>
       <form id="questions">
        <div id="questions">
        <div id='questionOne'>
          <div class='question'>1.Which JavaScript method is used to add an element to an array?:</div>
          <div class="answer">
-          <input type="radio" name="answer" value='.pop()'>.pop()
+          <input type="radio" name="answer1" value='0' required>.pop()
         </div>
           <br>
         <div>
-          <input type="radio" name="answer" value='.push()'>.push()
+          <input type="radio" name="answer1" value='20' required>.push()
         </div>
           <br>
           <div class="answer">
-           <input type="radio" name="answer" value='.add()' >.add()
+           <input type="radio" name="answer1" value='0' required>.add()
          </div>
         </div>
         </div>
@@ -36,69 +40,70 @@
         <div id='questionTwo'>
         <div class='question'>2.Which logical operator tells us whether a JavaScript statement is either true or false?:</div>
         <div class="answer">
-          <input type="radio" name="answer1" value='&&'>&&
+          <input type="radio" name="answer2" value='0' required>&&
         </div>
           <br>
         <div class="answer">
-          <input type="radio" name="answer1" value='!'>!
+          <input type="radio" name="answer2" value='0' required>!
         </div>
           <br>
         <div class="answer">
-           <input type="radio" name="answer1" value='||'>||
+           <input type="radio" name="answer2" value='20' required>||
         </div>
         </div>
 
         <div id='questionThree'>
         <div class='question'>3.What is the other name for Business Logic?:</div>
         <div class="answer">
-          <input type="radio" name="answer2" value='Back-end'>Back-end
+          <input type="radio" name="answer3" value='20' required>Back-end
         </div>
           <br>
         <div class="answer">
-          <input type="radio" name="answer2" value='Middle-end'>Middle-end
+          <input type="radio" name="answer3" value='0' required>Middle-end
         </div>
           <br>
         <div class="answer">
-           <input type="radio" name="answer2" value='Front-end'>Front-end
+           <input type="radio" name="answer3" value='0' required>Front-end
         </div>
         </div>
 
         <div id='questionFour'>
         <div class='question'>4.Which is <strong>not</strong> a Data Type?:</div>
         <div class="answer">
-          <input type="radio" name="answer3" value='Strings'>Strings
+          <input type="radio" name="answer4" value='0' required>Strings
         </div>
           <br>
         <div class="answer">
-          <input type="radio" name="answer3" value='Null'>Null
+          <input type="radio" name="answer4" value='0' required>Null
         </div>
           <br>
         <div class="answer">
-           <input type="radio" name="answer3" value='Wells'>Wells
+           <input type="radio" name="answer4" value='20' required>Wells
         </div>
         </div>
 
         <div id='questionFive'>
         <div class='question'>5.Which of the following is a JavaScript library?:</div>
         <div class="answer">
-          <input type="radio" name="answer4" value='Bootstrap'>Bootstrap
+          <input type="radio" name="answer5" value='0' required>Bootstrap
         </div>
           <br>
         <div class="answer">
-          <input type="radio" name="answer4" value='jQuery'>jQuery
+          <input type="radio" name="answer5" value='20' required>jQuery
         </div>
           <br>
         <div class="answer">
-          <input type="radio" name="answer4" value='JSFiddle'>JSFiddle
+          <input type="radio" name="answer5" value='0' required>JSFiddle
         </div>
         </div>
         <br>
           <button type="submit" class="btn btn-outline-primary">Submit answers</button>
       </form>
+      <br>
       <div id='results'></div>
        <br>
       <p>
-      <em>GOOD LUCK!</em>
+      <marquee><em>GOOD LUCK!</em></marquee>
       </p>
     </div>
   </body>
