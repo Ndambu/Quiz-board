@@ -21,7 +21,7 @@ $(document).ready(function(){
       if (answers0 === undefined || answers1 === undefined || answers2 === undefined || answers3 === undefined || answers4 === undefined); {
   $('#questionsIncomplete').text('Please Complete questions Before Submitting');
   $('#questionsIncomplete').fadeOut(10000);
-} else {
+} else 
          if (answer1 === answers[0]) {
     score += pointPerCorrect;
   }
@@ -39,11 +39,11 @@ $(document).ready(function(){
  }
 
 
-        $("input[type=radio][name=questionOneChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionTwoChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionThreeChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionFourChoice]:checked").prop('checked', false);
-        $("input[type=radio][name=questionFiveChoice]:checked").prop('checked', false);
+        $("input[type=radio][name=answer]:checked").prop('checked', false);
+        $("input[type=radio][name=answer1]:checked").prop('checked', false);
+        $("input[type=radio][name=answer2]:checked").prop('checked', false);
+        $("input[type=radio][name=answer3]:checked").prop('checked', false);
+        $("input[type=radio][name=answer4]:checked").prop('checked', false);
         $('#questionsIncomplete').text('');
         $('#result').text(percentage(score));
 }
