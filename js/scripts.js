@@ -8,11 +8,7 @@ $(document).ready(function() {
         var answerFive = parseInt($("input:radio[name=answer5]:checked").val());
         var answerSix = parseInt($("input:radio[name=answer6]:checked").val());
         var answer = answerOne+ answerTwo + answerThree + answerFour + answerFive + answerSix;
-      //  if (answer > 60) {
-      //   $("#results").text("Your score is: " + answer);
-      //  }else{
-      //      $("#results").text( "Your score is: " + answer + " Your Score is below Pass Mark");
-      //  }
+      
         document.getElementById("results").innerHTML= "your score is" + answer;
     });
 });
