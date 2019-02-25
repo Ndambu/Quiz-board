@@ -8,7 +8,7 @@ $(document).ready(function() {
         var answerFive = parseInt($("input:radio[name=answer5]:checked").val());
         var answerSix = parseInt($("input:radio[name=answer6]:checked").val());
         var answer = answerOne+ answerTwo + answerThree + answerFour + answerFive + answerSix;
-      
-        document.getElementById("results").innerHTML= "your score is" + answer;
+
+        document.getElementById("results").innerHTML= "your score is" + answer + "out of 120";
     });
 });
