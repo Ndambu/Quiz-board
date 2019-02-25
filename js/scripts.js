@@ -6,7 +6,8 @@ $(document).ready(function() {
         var answerThree = parseInt($("[name=answer3]:checked").val());
         var answerFour = parseInt($("[name=answer4]:checked").val());
         var answerFive = parseInt($("[name=answer5]:checked").val());
-        var answer = parseInt(answerOne+ answerTwo + answerThree + answerFour + answerFive);
+        var answerSix = parseInt($("[name=answer6]:checked").val());
+        var answer = parseInt(answerOne+ answerTwo + answerThree + answerFour + answerFive + answerSix);
         if (answer > 60) {
          $("#results").text("Your score is: " + answer);
         }else{
